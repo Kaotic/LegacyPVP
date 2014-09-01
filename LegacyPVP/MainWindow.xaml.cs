@@ -1,6 +1,10 @@
-﻿using System;
+﻿using LegacyPVP.Logic;
+using LegacyPVP.Logic.LegacyPVPLogic;
+using LegacyPVP.Logic.PageLogic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,6 +27,11 @@ namespace LegacyPVP
         public MainWindow()
         {
             InitializeComponent();
+            PageLogic.MainGrid = MainContent;
+            PageLogic.OverlayGrid = OverlayContent;
+            PageLogic.Win = this;
+            Client.ExecutingDirectory = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            Login.GetPreviousAccounts();
         }
     }
 }

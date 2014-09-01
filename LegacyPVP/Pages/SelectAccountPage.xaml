@@ -1,0 +1,14 @@
+﻿<Page x:Class="LegacyPVP.Pages.SelectAccountPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="768" d:DesignWidth="1280"
+	Title="SelectAccountPage">
+
+    <Grid>
+        <Button Content="Add Account" x:Name="AddAccount" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,10,0,0" Click="AddAccount_Click"/>
+
+    </Grid>
+</Page>

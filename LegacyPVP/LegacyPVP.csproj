@@ -46,6 +46,11 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -63,6 +68,37 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Elements\RotateText.xaml.cs">
+      <DependentUpon>RotateText.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\WatermarkPasswordbox.xaml.cs">
+      <DependentUpon>WatermarkPasswordbox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\WatermarkTextbox.xaml.cs">
+      <DependentUpon>WatermarkTextbox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\Client.cs" />
+    <Compile Include="Logic\LegacyPVPLogic\Login.cs" />
+    <Compile Include="Logic\LegacyPVPLogic\Security.cs" />
+    <Compile Include="Logic\PageLogic\PageLogic.cs" />
+    <Compile Include="Logic\RiotLogic\Patcher\GetLatestVersions.cs" />
+    <Compile Include="Logic\RiotLogic\Region\GetRegionFromTag.cs" />
+    <Compile Include="Logic\RiotLogic\Patcher\JsonNews.cs" />
+    <Compile Include="Logic\RiotLogic\Region\Region.cs" />
+    <Compile Include="Logic\RtmpsLogic\MessageReceived.cs" />
+    <Compile Include="Logic\RtmpsLogic\RiotCalls.cs" />
+    <Page Include="Elements\RotateText.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Elements\WatermarkPasswordbox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Elements\WatermarkTextbox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -75,8 +111,50 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Overlays\AddAccountOverlay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Overlays\NotifyOverlay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\CreateAccountPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\LoginToAccountPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\LoginToLeaguePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SelectAccountPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Overlays\AddAccountOverlay.xaml.cs">
+      <DependentUpon>AddAccountOverlay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Overlays\NotifyOverlay.xaml.cs">
+      <DependentUpon>NotifyOverlay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CreateAccountPage.xaml.cs">
+      <DependentUpon>CreateAccountPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LoginToAccountPage.xaml.cs">
+      <DependentUpon>LoginToAccountPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LoginToLeaguePage.xaml.cs">
+      <DependentUpon>LoginToLeaguePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SelectAccountPage.xaml.cs">
+      <DependentUpon>SelectAccountPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -94,6 +172,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Resource Include="Lobster_1.3.otf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -105,10 +184,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="PageLogic\" />
-    <Folder Include="ProgramLogic\" />
-    <Folder Include="RtmpsLogic\" />
-    <Folder Include="XmppLogic\" />
+    <Folder Include="Logic\ProgramLogic\" />
+    <Folder Include="Logic\XmppLogic\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RiotRtmpDto\RiotRtmpDto.csproj">
+      <Project>{7e033101-2250-49cd-ac97-0193970038db}</Project>
+      <Name>RiotRtmpDto</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LegacyPVPLicense.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
