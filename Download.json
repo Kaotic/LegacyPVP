@@ -1,0 +1,4 @@
+{"downloads":[
+{"Name":"LegacyPVPBeta","Version":"1.0.2.0","IsPre":false,"IsBeta":true,"IsImportantPatch":false,"IsLatestPatch":true,"DownloadLink":""},
+{"Name":"LegacyPVPPre","Version":"1.0.0.1","IsPre":true,"IsBeta":false,"IsImportantPatch":false,"IsLatestPatch":true,"DownloadLink":""},
+{"Name":"LegacyPVP","Version":"1.0.0.0","IsPre":false,"IsBeta":false,"IsImportantPatch":true,"IsLatestPatch":true,"DownloadLink":""}]}
