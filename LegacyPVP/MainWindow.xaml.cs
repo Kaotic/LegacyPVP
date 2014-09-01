@@ -21,6 +21,7 @@ namespace LegacyPVP
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
+    /// Do NOT MODIFY THIS FILE. IT SHOULD NO LONGER NEED MODIFICATIONS
     /// </summary>
     public partial class MainWindow : Window
     {

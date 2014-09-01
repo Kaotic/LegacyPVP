@@ -17,6 +17,12 @@ namespace LegacyPVP.Logic.PageLogic
         internal static MainWindow Win;
         internal static Type CurrentPage;
 
+        /// <summary>
+        /// Switches the pages before login
+        /// </summary>
+        /// <typeparam name="T">The page</typeparam>
+        /// <param name="Fade">Fade out the page?</param>
+        /// <param name="Arguments">Arguments</param>
         internal static void SwichMaserPage<T>(bool Fade = true, params object[] Arguments)
         {
             if (CurrentPage == typeof(T))
@@ -41,6 +47,13 @@ namespace LegacyPVP.Logic.PageLogic
                 MainGrid.Content = instance.Content;
             }
         }
+
+        /// <summary>
+        /// Use this to switch pages after loggin
+        /// </summary>
+        /// <typeparam name="T">What is the page you want to switch to</typeparam>
+        /// <param name="Fade">Fade out the page?</param>
+        /// <param name="Arguments">Arguments durp</param>
         internal static void SwichPage<T>(bool Fade = false, params object[] Arguments)
         {
             if (CurrentPage == typeof(T))
@@ -66,6 +79,11 @@ namespace LegacyPVP.Logic.PageLogic
             }
         }
 
+        /// <summary>
+        /// Show an overlay that does not need special arguments
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="Arguments"></param>
         internal static void Overlay<T>(params object[] Arguments)
         {
             var moveAnimation = new ThicknessAnimation(new Thickness(0, 0, 0, 0), TimeSpan.FromSeconds(0.5));
@@ -92,12 +110,19 @@ namespace LegacyPVP.Logic.PageLogic
             OverlayGrid.BeginAnimation(Grid.MarginProperty, moveAnimation);
         }
 
+        /// <summary>
+        /// Hide the overlay, Regardless of what it is
+        /// </summary>
+        /// <param name="thickness">Where do you want it to slide to</param>
         internal static void HideOverlay(Thickness thickness)
         {
             var moveAnimation = new ThicknessAnimation(thickness, TimeSpan.FromSeconds(0.5));
             OverlayGrid.BeginAnimation(Grid.MarginProperty, moveAnimation);
         }
 
+        /// <summary>
+        /// Focus the window
+        /// </summary>
         public static void FocusWindow()
         {
             Win.Focus();

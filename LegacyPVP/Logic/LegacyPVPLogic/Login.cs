@@ -10,6 +10,9 @@ namespace LegacyPVP.Logic.LegacyPVPLogic
 {
     public class Login
     {
+        /// <summary>
+        /// Use this to check if a player has created a LegacyLogin Account
+        /// </summary>
         internal static void GetPreviousAccounts()
         {
             if(!Directory.Exists(Path.Combine(Client.ExecutingDirectory, "Login")))
@@ -21,6 +24,13 @@ namespace LegacyPVP.Logic.LegacyPVPLogic
                 PageLogic.PageLogic.SwichMaserPage<LoginToAccountPage>();
             }
         }
+
+        /// <summary>
+        /// Use this to write stuff to a file
+        /// </summary>
+        /// <param name="Content">Content of the file</param>
+        /// <param name="FileData">where do you want the file to go. This path does not have to exist</param>
+        /// <param name="FileName">What do you want to name the file</param>
         internal static void CreateLoginFile(byte[] Content, string FileData, string FileName)
         {
             if (!Directory.Exists(FileData))
