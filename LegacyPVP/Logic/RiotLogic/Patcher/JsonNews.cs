@@ -79,7 +79,7 @@ namespace LegacyPVP.Logic.RiotLogic.Patcher
 
     public class Item
     {
-        public Item2 Item { get; set; }
+        public Item2 CurrentItem { get; set; }
         public List<object> ItemPricingSchedule { get; set; }
         public List<ItemFeaturedSchedule> ItemFeaturedSchedule { get; set; }
         public List<object> BundleItems { get; set; }
