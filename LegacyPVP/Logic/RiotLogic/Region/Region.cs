@@ -12,10 +12,10 @@ namespace LegacyPVP.Logic.RiotLogic.Region
         internal String InternalName { get; set; }
 
         //prod.na1.lol.riotgames.com
-        internal Uri Host { get; set; }
+        internal String Host { get; set; }
 
         //chat.na1.lol.riotgames.com
-        internal Uri XmppServer { get; set; }
+        internal String XmppServer { get; set; }
 
         //http://www.leagueoflegends.com/ladders
         internal Uri LadderUrl { get; set; }

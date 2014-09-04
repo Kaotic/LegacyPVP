@@ -15,7 +15,7 @@ namespace LegacyPVP.Logic.RiotLogic.Patcher
         /// </summary>
         /// <param name="NewsUri"></param>
         /// <returns>Latest Lol Version</returns>
-        internal string GetLatestLolVersion(Uri NewsUri)
+        internal static string GetLatestLolVersion(Uri NewsUri)
         {
             WebClient client = new WebClient();
             string LolNews = client.DownloadString(NewsUri);
@@ -28,13 +28,13 @@ namespace LegacyPVP.Logic.RiotLogic.Patcher
                     {
                         string VerionPre = versionData.title.Replace("Patch ", "");
                         string Version = VerionPre.Replace(" notes", "");
-                        return Version;
+                        return Version + ".14_08_33_13_33";
                     }
                 }
             }
             return GetDragon();
         }
-        public string GetDragon()
+        public static string GetDragon()
         {
             string dragonJSON = "";
             using (WebClient client = new WebClient())

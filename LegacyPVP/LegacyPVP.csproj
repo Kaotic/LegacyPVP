@@ -68,6 +68,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Elements\LoginAccount.xaml.cs">
+      <DependentUpon>LoginAccount.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Elements\RotateText.xaml.cs">
       <DependentUpon>RotateText.xaml</DependentUpon>
     </Compile>
@@ -78,15 +81,23 @@
       <DependentUpon>WatermarkTextbox.xaml</DependentUpon>
     </Compile>
     <Compile Include="Logic\Client.cs" />
+    <Compile Include="Logic\LegacyPVPLogic\LegacyPatch.cs" />
     <Compile Include="Logic\LegacyPVPLogic\Login.cs" />
     <Compile Include="Logic\LegacyPVPLogic\Security.cs" />
+    <Compile Include="Logic\LegacyPVPLogic\Update.cs" />
     <Compile Include="Logic\PageLogic\PageLogic.cs" />
     <Compile Include="Logic\RiotLogic\Patcher\GetLatestVersions.cs" />
     <Compile Include="Logic\RiotLogic\Region\GetRegionFromTag.cs" />
     <Compile Include="Logic\RiotLogic\Patcher\JsonNews.cs" />
     <Compile Include="Logic\RiotLogic\Region\Region.cs" />
+    <Compile Include="Logic\RtmpsLogic\HeartBeat.cs" />
+    <Compile Include="Logic\RtmpsLogic\Logic.cs" />
     <Compile Include="Logic\RtmpsLogic\MessageReceived.cs" />
     <Compile Include="Logic\RtmpsLogic\RiotCalls.cs" />
+    <Page Include="Elements\LoginAccount.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Elements\RotateText.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

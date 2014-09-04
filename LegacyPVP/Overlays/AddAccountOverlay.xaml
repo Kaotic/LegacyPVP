@@ -9,15 +9,18 @@
 	Title="AddAccountOverlay">
 
     <Grid Background="#7FB8B8B8">
-        <Elements:RotateText HorizontalAlignment="Center" VerticalAlignment="Top" Margin="150,56,150,0" Width="980" />
+        <Elements:RotateText x:Name="Region" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="150,56,150,0" Width="980" />
         <Label Content="Select Your Region" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Width="424" Margin="428,22,0,0"/>
         <Grid Background="White" HorizontalAlignment="Center" VerticalAlignment="Center" Height="542" Width="980" >
-            <Button Content="Button" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="75" Margin="0,0,10,10"/>
+            <Button Content="Close" Click="Button_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="75" Margin="0,0,10,10"/>
             <Elements:WatermarkTextbox x:Name="LOLUsername" Watermark="Username" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,222,0,0" Width="474"/>
             <Elements:WatermarkPasswordbox x:Name="LOLPassword" Watermark="Password" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,222,10,0" Width="474"/>
             <Label Content="Please Add A League Of Legends Account To LegacyPVP" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,10,0,0"/>
             <Button x:Name="LoginButton" IsDefault="True" Click="AddAccount" Width="0" Height="0"/>
             <Label x:Name="HintLabel" Visibility="Hidden" Content="Unable To Get League Summoner Data" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="316,271,306,0" FontStyle="Italic" Foreground="#FF444444"/>
+            <Label x:Name="HintLabel1"  Content="Data" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="372,334,362,0" FontStyle="Italic" Foreground="#FF444444"/>
+            <Label x:Name="HintLabel2"  Content="Data 2" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="372,300,362,0" FontStyle="Italic" Foreground="#FF444444"/>
+            <Label x:Name="HintLabel1_Copy"  Content="Data" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,363,10,0" FontStyle="Italic" Foreground="#FF444444" Width="960"/>
         </Grid>
 
 

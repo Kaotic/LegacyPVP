@@ -17,5 +17,7 @@
         <Grid>
             <Label x:Name="RegionLeft" Content="Korea (KR)" HorizontalAlignment="Left" FontSize="10" VerticalAlignment="Center" Foreground="White" Margin="25,1,343,0"/>
         </Grid>
+        <Button x:Name="RightButton_Copy" Click="RightButton_Click" Content="" Style="{DynamicResource SpinButton}" HorizontalAlignment="Right" VerticalAlignment="Top" Width="200" Height="30"/>
+        <Button x:Name="LeftButton_Copy" Click="LeftButton_Click" Content="" Style="{DynamicResource SpinButton}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="30"/>
     </Grid>
 </UserControl>

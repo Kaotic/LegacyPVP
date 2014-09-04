@@ -1,7 +1,10 @@
-﻿using LegacyPVP.Logic.PageLogic;
+﻿using LegacyPVP.Elements;
+using LegacyPVP.Logic;
+using LegacyPVP.Logic.PageLogic;
 using LegacyPVP.Overlays;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +16,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace LegacyPVP.Pages
 {
@@ -25,6 +27,21 @@ namespace LegacyPVP.Pages
         public SelectAccountPage()
         {
             InitializeComponent();
+
+            if(Directory.Exists(Path.Combine(Client.ExecutingDirectory, "Login")))
+            {
+                string[] Directorys = Directory.GetDirectories(Path.Combine(Client.ExecutingDirectory, "Login"));
+                foreach(string dir in Directorys)
+                {
+                    string[] Dir2 = Directory.GetDirectories(Path.Combine(Client.ExecutingDirectory, "Login", dir));
+                    foreach(string dir2 in Dir2)
+                    {
+                        LoginAccount acc = new LoginAccount();
+                        acc.Name = dir2;
+                        Accounts.Items.Add(acc);
+                    }
+                }
+            }
         }
 
         private void AddAccount_Click(object sender, RoutedEventArgs e)
