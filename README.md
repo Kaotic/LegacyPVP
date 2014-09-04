@@ -4,6 +4,13 @@ LegacyPVP
 League of legends custom client, that is based of LegendaryClient and Wintermint
 
 #Features
+* Bridge all your accounts to one client. Add them with the easy to use Auth system
+* Secures your accounts with DESCryptoServiceProvider
+* Ability to host a private server to store your login details on
+* Ability to use LPVPS to store you Accounts and Replays
+* Replays built right into the client. Recording starts as soon as the game starts
+* Watch live matches, Without a spectator delay
+* And more.
 
 LegacyLogin
 ===========
