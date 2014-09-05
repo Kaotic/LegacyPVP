@@ -17,10 +17,10 @@
             <Elements:WatermarkPasswordbox x:Name="LOLPassword" Watermark="Password" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,222,10,0" Width="474"/>
             <Label Content="Please Add A League Of Legends Account To LegacyPVP" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,10,0,0"/>
             <Button x:Name="LoginButton" IsDefault="True" Click="AddAccount" Width="0" Height="0"/>
-            <Label x:Name="HintLabel" Visibility="Hidden" Content="Unable To Get League Summoner Data" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="316,271,306,0" FontStyle="Italic" Foreground="#FF444444"/>
-            <Label x:Name="HintLabel1"  Content="Data" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="372,334,362,0" FontStyle="Italic" Foreground="#FF444444"/>
-            <Label x:Name="HintLabel2"  Content="Data 2" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="372,300,362,0" FontStyle="Italic" Foreground="#FF444444"/>
-            <Label x:Name="HintLabel1_Copy"  Content="Data" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,363,10,0" FontStyle="Italic" Foreground="#FF444444" Width="960"/>
+            <Label x:Name="HintLabel" HorizontalContentAlignment="Center" Content="Main Data" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,271,10,0" FontStyle="Italic" Foreground="#FF444444" Width="960"/>
+            <Label x:Name="HintLabel1" HorizontalContentAlignment="Center"  Content="Data" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,334,10,0" FontStyle="Italic" Foreground="#FF444444" Width="960"/>
+            <Label x:Name="HintLabel2" HorizontalContentAlignment="Center"  Content="Data 2" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,300,10,0" FontStyle="Italic" Foreground="#FF444444" Width="960"/>
+            <Label x:Name="HintLabel1_Copy" HorizontalContentAlignment="Center"  Content="Data" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,363,10,0" FontStyle="Italic" Foreground="#FF444444" Width="960"/>
         </Grid>
 
 

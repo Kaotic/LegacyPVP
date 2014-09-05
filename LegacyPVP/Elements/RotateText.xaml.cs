@@ -159,9 +159,5 @@ namespace LegacyPVP.Elements
                 RegionRight.Content = "European Union North (EUN)";
             }
         }
-        private String GetRegion()
-        {
-            return Region.Tag.ToString();
-        }
     }
 }

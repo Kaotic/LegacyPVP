@@ -1,7 +1,7 @@
 ﻿using System;
 using RtmpSharp.IO;
 
-namespace RiotRtmpDto.Platform.Login
+namespace LegacyPVP.Logic.RiotLogic.Login
 {
     [Serializable]
     [SerializedName("com.riotgames.platform.login.AuthenticationCredentials")]

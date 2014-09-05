@@ -54,6 +54,16 @@ namespace LegacyPVP.RtmpsLogic
             return InvokeAsync<Session>("loginService", "login", Credentials);
         }
 
+        public static Task<Session> Login(AuthenticationCredentials[] Credentials)
+        {
+            return InvokeAsync<Session>("loginService", "login", Credentials);
+        }
+
+        public static Task<Session> Login(LegacyPVP.Logic.RiotLogic.Login.AuthenticationCredentials[] Credentials)
+        {
+            return InvokeAsync<Session>("loginService", "login", Credentials);
+        }
+
         /// <summary>
         /// Heartbeat to send every 2 minutes.
         /// </summary>

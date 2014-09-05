@@ -127,5 +127,10 @@ namespace LegacyPVP.Logic.PageLogic
         {
             Win.Focus();
         }
+
+        internal static void ClearPage(Page page)
+        {
+
+        }
     }
 }
