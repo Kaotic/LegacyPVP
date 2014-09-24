@@ -18,7 +18,7 @@ LegacyLogin
 Bridge all of your accounts to one client. All Regions, One client.
 Save your accounts locally with a LegacyLogin.Obfuscation, Which obfuscates your account and stores it locally.
 
-Will add a server to allow you to send Encrypted Data to store it on the server [The server doesn't do encryption, It is encyrpted locally]
+Will add a server to allow you to send Encrypted Data to store it on the server [The server doesn't do encryption, It is encrypted locally]
 
 LegacyReplays
 =============
